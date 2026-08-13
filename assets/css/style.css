@@ -15,20 +15,20 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
 }
 body {
   background: #f7f7f7;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 *::selection {
   background: #2b3dda;
   color: #fff;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 0.8rem;
@@ -64,18 +64,24 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  max-width: 100vw;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.7rem 10%;
+  padding: 1.7rem 5%;
   height: 6.5rem;
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  box-sizing: border-box;
 }
 section {
   min-height: auto;
-  padding: 4rem 7%;
+  padding: 4rem 5%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .heading {
   font-size: 3.5rem;
@@ -106,7 +112,7 @@ header .navbar ul {
   align-items: center;
 }
 header .navbar li {
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
 }
 header .navbar ul li a {
   font-size: 1.57rem;
@@ -187,10 +193,14 @@ header .navbar ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  min-height: calc(100vh - 6.5rem);
+  min-height: auto;
   align-items: center;
+  justify-content: space-around;
   padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 .home #particles-js {
   position: absolute;
@@ -208,18 +218,20 @@ header .navbar ul li a:hover {
   width: 100%;
 }
 .home .content {
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
+  max-width: 100%;
   padding-top: 1rem;
   z-index: 1;
 }
 .home .image {
-  flex: 1 1 40rem;
+  flex: 1 1 28rem;
+  max-width: 100%;
   z-index: 1;
   text-align: center;
 }
 .home .image img {
   width: 75%;
-  max-width: 350px;
+  max-width: 320px;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -337,19 +349,19 @@ header .navbar ul li a:hover {
 /* hero media queries starts*/
 @media (max-width: 450px) {
   .home .btn {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
   .socials {
-    margin-top: 12rem;
+    margin-top: 2rem;
   }
   .home .image img {
-    margin-top: -12rem;
+    margin-top: 0;
   }
   .home .content p {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .home .content p span {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 /* hero media queries ends*/
@@ -471,8 +483,13 @@ header .navbar ul li a:hover {
 
 /* skills section starts */
 .skills {
-  min-height: 90vh;
+  min-height: auto;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 .skills h2 {
   color: #fff;
@@ -485,23 +502,26 @@ header .navbar ul li a:hover {
   color: #fff;
   border-radius: 1rem;
   padding: 2rem;
-  width: 90%;
-  margin: auto;
-  margin-top: 2rem;
+  width: 95%;
+  max-width: 1100px;
+  margin: 2rem auto 0 auto;
+  box-sizing: border-box;
 }
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5rem;
 }
 .skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 0;
+  padding: 12px 8px;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 22, 0.9);
   transition: 0.2s;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
@@ -511,33 +531,39 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+.skills .container .bar .info img {
+  max-width: 48px;
+  height: auto;
 }
 .skills .container .bar .info i {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .skills .container .bar .info span {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   font-family: "Poppins";
-  margin-left: 0.5rem;
+  margin-left: 0;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
 }
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
   .skills .container {
-    padding: 0;
-    margin: 0;
+    padding: 1.5rem 1rem;
+    margin: 1rem auto 0 auto;
+    width: 100%;
   }
   .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    margin: 0;
+    padding: 0;
     gap: 1rem;
-  }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
   }
 }
 /* skills media queries ends*/
@@ -599,7 +625,8 @@ header .navbar ul li a:hover {
   flex-direction: column;
   padding: 1rem;
   flex-wrap: wrap;
-  flex: 1 1 70rem;
+  flex: 1 1 30rem;
+  max-width: 100%;
 }
 .education .box-container .box .content h3 {
   font-size: 2.5rem;
@@ -624,7 +651,7 @@ header .navbar ul li a:hover {
 }
 
 /* education media queries starts*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .education .box-container .box {
     flex-direction: column;
     width: 100%;
@@ -686,7 +713,8 @@ header .navbar ul li a:hover {
   box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.25);
 }
 .research .box-container .box .image {
-  flex: 1 1 30rem;
+  flex: 1 1 25rem;
+  max-width: 100%;
   width: 100%;
 }
 .research .box-container .box img {
@@ -699,7 +727,8 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
-  flex: 1 1 60rem;
+  flex: 1 1 30rem;
+  max-width: 100%;
 }
 .research .box-container .box .content h3 {
   font-size: 2.4rem;
