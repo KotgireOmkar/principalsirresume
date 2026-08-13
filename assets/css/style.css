@@ -128,6 +128,17 @@ header .navbar ul li a:hover {
   border-bottom: 0.2rem solid #011aff;
   padding: 0.5rem 0;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 1.5rem 3%;
+  }
+  header .navbar li {
+    margin-left: 1.1rem;
+  }
+  header .navbar ul li a {
+    font-size: 1.4rem;
+  }
+}
 /* navbar ends */
 
 /* hamburger icon starts*/
