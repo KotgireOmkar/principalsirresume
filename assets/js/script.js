@@ -45,7 +45,7 @@ $(document).ready(function () {
         const originalBtnText = submitBtn.html();
         submitBtn.html('Sending... <i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
 
-        fetch("https://formsubmit.co/ajax/boyo52234@gmail.com", {
+        fetch("https://formsubmit.co/ajax/vishweshw87@gmail.com", {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
