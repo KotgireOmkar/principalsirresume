@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Pharmacology",
+        "icon": "https://img.icons8.com/color/48/000000/pill.png"
+    },
+    {
+        "name": "Toxicology",
+        "icon": "https://img.icons8.com/color/48/000000/poison.png"
+    },
+    {
+        "name": "Molecular Biology",
+        "icon": "https://img.icons8.com/color/48/000000/dna-helix.png"
+    },
+    {
+        "name": "Drug Development",
+        "icon": "https://img.icons8.com/color/48/000000/medicine-bottle.png"
+    },
+    {
+        "name": "Clinical Evaluations",
+        "icon": "https://img.icons8.com/color/48/000000/stethoscope.png"
+    },
+    {
+        "name": "Pharmaceutical Analysis",
+        "icon": "https://img.icons8.com/color/48/000000/microscope.png"
+    },
+    {
+        "name": "Bioassay",
+        "icon": "https://img.icons8.com/color/48/000000/test-tube.png"
+    },
+    {
+        "name": "Pharmacokinetics",
+        "icon": "https://img.icons8.com/color/48/000000/graph.png"
+    },
+    {
+        "name": "ELISA",
+        "icon": "https://img.icons8.com/color/48/000000/laboratory.png"
+    },
+    {
+        "name": "In-Vivo Research",
+        "icon": "https://img.icons8.com/color/48/000000/rat-silhouette.png"
+    },
+    {
+        "name": "Statistical Analysis",
+        "icon": "https://img.icons8.com/color/48/000000/combo-chart.png"
+    },
+    {
+        "name": "Quality Control",
+        "icon": "https://img.icons8.com/color/48/000000/checked-2.png"
+    },
+    {
+        "name": "Research Design",
+        "icon": "https://img.icons8.com/color/48/000000/mind-map.png"
+    },
+    {
+        "name": "Academic Leadership",
+        "icon": "https://img.icons8.com/color/48/000000/leadership.png"
+    },
+    {
+        "name": "GATE Qualified",
+        "icon": "https://img.icons8.com/color/48/000000/diploma.png"
+    },
+    {
+        "name": "GPAT Qualified",
+        "icon": "https://img.icons8.com/color/48/000000/certificate.png"
+    }
+]
