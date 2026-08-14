@@ -1,66 +1,144 @@
 [
-    {
-        "name": "Pharmacology",
-        "icon": "https://img.icons8.com/color/48/000000/pill.png"
-    },
-    {
-        "name": "Toxicology",
-        "icon": "https://img.icons8.com/color/48/000000/poison.png"
-    },
-    {
+  {
+    "category": "CLINICAL & PHARMA",
+    "icon": "fas fa-pills",
+    "color": "#00bcd4",
+    "skills": [
+      {
+        "name": "Advanced Pharmacology & Toxicology",
+        "icon": "fas fa-capsules"
+      },
+      {
         "name": "Molecular Biology",
-        "icon": "https://img.icons8.com/color/48/000000/dna-helix.png"
-    },
-    {
-        "name": "Drug Development",
-        "icon": "https://img.icons8.com/color/48/000000/medicine-bottle.png"
-    },
-    {
-        "name": "Clinical Evaluations",
-        "icon": "https://img.icons8.com/color/48/000000/stethoscope.png"
-    },
-    {
-        "name": "Pharmaceutical Analysis",
-        "icon": "https://img.icons8.com/color/48/000000/microscope.png"
-    },
-    {
-        "name": "Bioassay",
-        "icon": "https://img.icons8.com/color/48/000000/test-tube.png"
-    },
-    {
-        "name": "Pharmacokinetics",
-        "icon": "https://img.icons8.com/color/48/000000/graph.png"
-    },
-    {
-        "name": "ELISA",
-        "icon": "https://img.icons8.com/color/48/000000/laboratory.png"
-    },
-    {
-        "name": "In-Vivo Research",
-        "icon": "https://img.icons8.com/color/48/000000/rat-silhouette.png"
-    },
-    {
-        "name": "Statistical Analysis",
-        "icon": "https://img.icons8.com/color/48/000000/combo-chart.png"
-    },
-    {
-        "name": "Quality Control",
-        "icon": "https://img.icons8.com/color/48/000000/checked-2.png"
-    },
-    {
-        "name": "Research Design",
-        "icon": "https://img.icons8.com/color/48/000000/mind-map.png"
-    },
-    {
-        "name": "Academic Leadership",
-        "icon": "https://img.icons8.com/color/48/000000/leadership.png"
-    },
-    {
-        "name": "GATE Qualified",
-        "icon": "https://img.icons8.com/color/48/000000/diploma.png"
-    },
-    {
-        "name": "GPAT Qualified",
-        "icon": "https://img.icons8.com/color/48/000000/certificate.png"
-    }
+        "icon": "fas fa-dna"
+      },
+      {
+        "name": "Modern Pharmaceutical Analysis",
+        "icon": "fas fa-microscope"
+      },
+      {
+        "name": "Drug Development Process",
+        "icon": "fas fa-prescription-bottle-alt"
+      },
+      {
+        "name": "Pharmacokinetic Modeling",
+        "icon": "fas fa-chart-line"
+      }
+    ]
+  },
+  {
+    "category": "IN-VIVO & DISEASE MODELS",
+    "icon": "fas fa-heartbeat",
+    "color": "#ffc107",
+    "skills": [
+      {
+        "name": "Invasive & Non-Invasive Rat ECG",
+        "icon": "fas fa-heartbeat"
+      },
+      {
+        "name": "Antiarrhythmic (Coronary Ligation)",
+        "icon": "fas fa-notes-medical"
+      },
+      {
+        "name": "CNS Screening (Convulsions, Anxiety)",
+        "icon": "fas fa-brain"
+      },
+      {
+        "name": "Disease Models (Ulcer, Inflammatory)",
+        "icon": "fas fa-stethoscope"
+      },
+      {
+        "name": "Drug-Drug Interaction Studies",
+        "icon": "fas fa-pills"
+      }
+    ]
+  },
+  {
+    "category": "ISOLATED TISSUE BIOASSAYS",
+    "icon": "fas fa-vial",
+    "color": "#e91e63",
+    "skills": [
+      {
+        "name": "Rabbit Jejunum Preparation",
+        "icon": "fas fa-vial"
+      },
+      {
+        "name": "Guinea Pig Ileum Bioassay",
+        "icon": "fas fa-vials"
+      },
+      {
+        "name": "Isolated Rabbit Heart Model",
+        "icon": "fas fa-heart"
+      },
+      {
+        "name": "Rat Uterus Preparation",
+        "icon": "fas fa-eye-dropper"
+      }
+    ]
+  },
+  {
+    "category": "BIOASSAYS & ANALYTICS",
+    "icon": "fas fa-flask",
+    "color": "#00e676",
+    "skills": [
+      {
+        "name": "Bioassay Standardization (IP/BP/USP)",
+        "icon": "fas fa-file-medical-alt"
+      },
+      {
+        "name": "ELISA Procedures & Immunoassays",
+        "icon": "fas fa-syringe"
+      },
+      {
+        "name": "Quality Control & Packaging (Lupin)",
+        "icon": "fas fa-check-double"
+      },
+      {
+        "name": "Medicinal Plant Extraction",
+        "icon": "fas fa-leaf"
+      }
+    ]
+  },
+  {
+    "category": "EXPERIMENTAL & ANIMAL CARE",
+    "icon": "fas fa-paw",
+    "color": "#9c27b0",
+    "skills": [
+      {
+        "name": "Humane Handling (Mouse, Rat, Rabbit)",
+        "icon": "fas fa-paw"
+      },
+      {
+        "name": "Pharmacological Design",
+        "icon": "fas fa-project-diagram"
+      },
+      {
+        "name": "Statistical Analysis of Bio-Data",
+        "icon": "fas fa-chart-bar"
+      }
+    ]
+  },
+  {
+    "category": "ACADEMIC & LEADERSHIP",
+    "icon": "fas fa-award",
+    "color": "#ff9800",
+    "skills": [
+      {
+        "name": "Institutional Administration (Principal)",
+        "icon": "fas fa-user-tie"
+      },
+      {
+        "name": "GATE 2009 Qualified (IIT Roorkee)",
+        "icon": "fas fa-award"
+      },
+      {
+        "name": "GPAT 2011 Qualified (M.S. Baroda)",
+        "icon": "fas fa-medal"
+      },
+      {
+        "name": "Ph.D. & M.Pharm Thesis Mentorship",
+        "icon": "fas fa-user-graduate"
+      }
+    ]
+  }
 ]

@@ -109,18 +109,52 @@ async function fetchData(type = "skills") {
     return data;
 }
 
-function showSkills(skills) {
+function showSkills(categories) {
     let skillsContainer = document.getElementById("skillsContainer");
+    if (!skillsContainer) return;
     let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
+    
+    if (categories.length > 0 && categories[0].category) {
+        categories.forEach(cat => {
+            let accentColor = cat.color || '#00bcd4';
+            let subSkillsHTML = "";
+            cat.skills.forEach(skill => {
+                let iconElement = skill.icon.startsWith("http") 
+                    ? `<img src="${skill.icon}" alt="${skill.name}" onerror="this.onerror=null; this.outerHTML='<i class=\\'fas fa-pills\\' style=\\'color:${accentColor}; font-size: 1.8rem;\\'></i>';" />`
+                    : `<i class="${skill.icon}" style="color: ${accentColor}; font-size: 1.8rem;"></i>`;
+                
+                subSkillsHTML += `
+                <div class="subskill-box">
+                  <span class="subskill-icon">${iconElement}</span>
+                  <span class="subskill-name">${skill.name}</span>
+                </div>`;
+            });
+
+            let catIcon = cat.icon ? `<i class="${cat.icon}"></i>` : '';
+
+            skillHTML += `
+            <div class="category-column-card" style="--cat-accent: ${accentColor};">
+              <div class="category-top">
+                <div class="category-icon-wrapper">
+                  ${catIcon}
+                </div>
+                <h3 class="category-title">${cat.category}</h3>
               </div>
-            </div>`
-    });
+              <div class="category-divider"></div>
+              <div class="subskills-list">
+                ${subSkillsHTML}
+              </div>
+            </div>`;
+        });
+    } else {
+        categories.forEach(skill => {
+            skillHTML += `
+            <div class="subskill-box">
+              <span class="subskill-icon"><i class="fas fa-pills" style="font-size: 1.8rem;"></i></span>
+              <span class="subskill-name">${skill.name}</span>
+            </div>`;
+        });
+    }
     skillsContainer.innerHTML = skillHTML;
 }
 
@@ -133,6 +167,9 @@ function showProjects(projects) {
 
 fetchData().then(data => {
     showSkills(data);
+    if (typeof srtop !== 'undefined') {
+        srtop.reveal('.skills .category-column-card', { interval: 150 });
+    }
 });
 
 // <!-- tilt js effect starts -->
@@ -179,7 +216,7 @@ const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 1000,
-    reset: true
+    reset: false
 });
 
 /* SCROLL HOME */
@@ -204,8 +241,7 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.skills .category-column-card', { interval: 150 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
