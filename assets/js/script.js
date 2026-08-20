@@ -41,11 +41,12 @@ $(document).ready(function () {
     $("#contact-form").submit(function (event) {
         event.preventDefault();
         
+        const formElement = this;
         const submitBtn = $(this).find('button[type="submit"]');
         const originalBtnText = submitBtn.html();
         submitBtn.html('Sending... <i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
 
-        fetch("https://formsubmit.co/ajax/vishweshw87@gmail.com", {
+        fetch("https://formsubmit.co/ajax/principal.scopa@gmail.com", {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
@@ -56,17 +57,20 @@ $(document).ready(function () {
                 email: $("input[name='email']").val(),
                 phone: $("input[name='phone']").val(),
                 message: $("textarea[name='message']").val(),
-                _subject: "New Message from Portfolio Website"
+                _subject: "New Portfolio Message for Dr. Vishweshwar",
+                _template: "table",
+                _captcha: "false"
             })
         })
         .then(response => response.json())
         .then(data => {
-            document.getElementById("contact-form").reset();
-            alert("Thank you! Your message has been sent successfully.");
+            formElement.reset();
+            alert("Thank you! Your message has been sent successfully to principal.scopa@gmail.com.");
         })
         .catch(error => {
             console.error('Error:', error);
-            alert("Form submission failed. Please try again.");
+            alert("Thank you! Your message is being sent.");
+            formElement.submit();
         })
         .finally(() => {
             submitBtn.html(originalBtnText).prop('disabled', false);
@@ -102,7 +106,7 @@ var typed = new Typed(".typing-text", {
 async function fetchData(type = "skills") {
     let response
     type === "skills" ?
-        response = await fetch("skills.json")
+        response = await fetch("./skills.json")
         :
         response = await fetch("./projects/projects.json")
     const data = await response.json();
@@ -159,14 +163,21 @@ function showSkills(categories) {
 }
 
 function showProjects(projects) {
+    if (!projects || projects.length === 0) return;
     let projectsContainer = document.querySelector("#work .box-container");
-    if (projectsContainer) {
-        projectsContainer.innerHTML = "";
-    }
+    if (!projectsContainer) return;
+    // render if project items exist in json
 }
 
 fetchData().then(data => {
-    showSkills(data);
+    if (data && data.length > 0) {
+        showSkills(data);
+    }
+    if (typeof srtop !== 'undefined') {
+        srtop.reveal('.skills .category-column-card', { interval: 150 });
+    }
+}).catch(err => {
+    console.warn("Using pre-rendered skills from HTML:", err);
     if (typeof srtop !== 'undefined') {
         srtop.reveal('.skills .category-column-card', { interval: 150 });
     }
